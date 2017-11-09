@@ -8,16 +8,16 @@ $( document ).ready(function() {
     });
 
 
-    function ajaxPost(){
+    function ajaxPost($){
 
         var textToUse = $("#textToUse").val();
 
         // DO POST
         $.ajax({
             type : "POST",
-            contentType : "application/json",
-            url : window.location + "api/customer/save",
-            data : JSON.stringify(textToUse),
+            contentType : "html",//was something else
+            url : "Response.java",//was something else
+            data : JSON.stringify( {id : textToUse}),
             dataType : "json",
             success : function(response) {
 
